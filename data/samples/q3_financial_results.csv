@@ -1,0 +1,13 @@
+region,department,revenue,operational_cost,operating_margin,headcount,quarter
+North America,Enterprise Cloud,45200000,28500000,0.369,145,Q3
+North America,Cybersecurity Solutions,28400000,19200000,0.324,98,Q3
+North America,AI & Data Platforms,34100000,21000000,0.384,112,Q3
+Europe,Enterprise Cloud,32100000,22400000,0.302,110,Q3
+Europe,Cybersecurity Solutions,21500000,15800000,0.265,74,Q3
+Europe,AI & Data Platforms,24900000,16700000,0.329,85,Q3
+Asia Pacific,Enterprise Cloud,38900000,24100000,0.380,160,Q3
+Asia Pacific,Cybersecurity Solutions,18700000,13200000,0.294,65,Q3
+Asia Pacific,AI & Data Platforms,29600000,17800000,0.399,105,Q3
+Latin America,Enterprise Cloud,12400000,9800000,0.210,52,Q3
+Latin America,Cybersecurity Solutions,8900000,7100000,0.202,38,Q3
+Latin America,AI & Data Platforms,11200000,8300000,0.259,42,Q3

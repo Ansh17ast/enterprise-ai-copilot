@@ -1,0 +1,33 @@
+# Global Enterprise Information Security & Compliance Policy (Standard 402.B)
+
+## 1. Scope & Governance
+This policy establishes mandatory data protection and access control standards across all enterprise business units, regional subsidiaries, and cloud infrastructure environments. Compliance is audited semi-annually by the Internal Audit and Risk Management committee.
+
+## 2. Authentication & Identity Management
+2.1 Multi-Factor Authentication (MFA):
+- Hardware-token or FIDO2-compliant phishing-resistant MFA is strictly required for all administrative access to production systems, code repositories, and financial ledgers.
+- Time-based One-Time Password (TOTP) is permitted as a secondary method for standard employee workstation access. SMS-based verification is deprecated and strictly forbidden.
+- Session timeout for administrative consoles is enforced at 15 minutes of inactivity. Standard corporate portal sessions expire after 8 hours.
+
+## 3. Data Classification & Retention Protocols
+3.1 Classification Levels:
+- Tier 1 (Confidential / Restricted): Personally Identifiable Information (PII), customer financial records, cryptographic keys, and executive strategic plans.
+- Tier 2 (Internal Business Use): Internal project documentation, operational telemetry, non-public roadmaps, and employee rosters.
+- Tier 3 (Public): Published marketing collateral, press releases, and approved open-source repositories.
+
+3.2 Mandatory Retention Periods:
+- Financial and accounting transaction logs must be retained in immutable, write-once-read-many (WORM) storage for a minimum of 7 years in accordance with SOX guidelines.
+- Access audit logs and security telemetry must be preserved for 365 days in active searchable storage and archived for an additional 2 years.
+- Customer support call transcripts and voice recordings must be permanently purged or anonymized within 90 days of issue closure unless subject to active legal hold.
+
+## 4. Encryption Standards
+4.1 Data in Transit:
+- All external and inter-service HTTP communications must enforce TLS 1.3 encryption with strict cipher suites (AES-256-GCM or ChaCha20-Poly1305). Deprecated TLS 1.0 and 1.1 protocols are permanently blocked at the ingress gateway.
+
+4.2 Data at Rest:
+- All database volumes, block stores, object stores, and local developer laptops must enforce AES-256 encryption. Master encryption keys are rotated automatically every 90 days through an isolated Hardware Security Module (HSM).
+
+## 5. Incident Response & Escalation Cadence
+- Severity 1 (Critical Security Breach / Active Data Exfiltration): Security Operations Center (SOC) must initiate triage within 15 minutes of detection. Executive breach notification must be submitted to the Chief Information Security Officer (CISO) within 60 minutes.
+- Severity 2 (Major Service Degradation / Suspected Compromise): Triage initiated within 1 hour; resolution plan finalized within 4 hours.
+- Severity 3 (Minor Security Vulnerability / Policy Anomaly): Remediation within 14 calendar days.

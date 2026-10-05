@@ -1,0 +1,82 @@
+[
+  {
+    "id": "eval_01",
+    "query": "What is our mandatory retention period for financial transaction logs?",
+    "category": "unstructured_rag",
+    "expected_source": "enterprise_security_policy.txt",
+    "expected_keywords": ["7 years", "SOX", "immutable"],
+    "expected_intent": "unstructured_rag"
+  },
+  {
+    "id": "eval_02",
+    "query": "What are the authentication and MFA requirements for administrative access?",
+    "category": "unstructured_rag",
+    "expected_source": "enterprise_security_policy.txt",
+    "expected_keywords": ["FIDO2", "hardware-token", "phishing-resistant"],
+    "expected_intent": "unstructured_rag"
+  },
+  {
+    "id": "eval_03",
+    "query": "What are the vendor SLA uptime commitments and associated penalties?",
+    "category": "unstructured_rag",
+    "expected_source": "vendor_procurement_report.txt",
+    "expected_keywords": ["99.99%", "monthly availability", "penalty"],
+    "expected_intent": "unstructured_rag"
+  },
+  {
+    "id": "eval_04",
+    "query": "What is the standard payment terms schedule for vendors?",
+    "category": "unstructured_rag",
+    "expected_source": "vendor_procurement_report.txt",
+    "expected_keywords": ["Net 60", "invoice receipt", "ACH"],
+    "expected_intent": "unstructured_rag"
+  },
+  {
+    "id": "eval_05",
+    "query": "What is the total revenue across all enterprise regions?",
+    "category": "structured_analytics",
+    "expected_source": "table:q3_financial_results",
+    "expected_keywords": ["282,500,000", "revenue"],
+    "expected_intent": "structured_analytics"
+  },
+  {
+    "id": "eval_06",
+    "query": "What is the average operating margin by department?",
+    "category": "structured_analytics",
+    "expected_source": "table:q3_financial_results",
+    "expected_keywords": ["department", "operating_margin"],
+    "expected_intent": "structured_analytics"
+  },
+  {
+    "id": "eval_07",
+    "query": "What is the total headcount in North America?",
+    "category": "structured_analytics",
+    "expected_source": "table:q3_financial_results",
+    "expected_keywords": ["headcount"],
+    "expected_intent": "structured_analytics"
+  },
+  {
+    "id": "eval_08",
+    "query": "What is the corporate policy regarding Martian real estate colonization?",
+    "category": "out_of_domain_refusal",
+    "expected_source": "NONE",
+    "expected_keywords": ["insufficient", "refusal"],
+    "expected_intent": "unstructured_rag"
+  },
+  {
+    "id": "eval_09",
+    "query": "Explain quantum teleportation protocols in atmospheric physics.",
+    "category": "out_of_domain_refusal",
+    "expected_source": "NONE",
+    "expected_keywords": ["insufficient", "refusal"],
+    "expected_intent": "unstructured_rag"
+  },
+  {
+    "id": "eval_10",
+    "query": "Show total revenue by region along with our contract termination policy",
+    "category": "hybrid_composite",
+    "expected_source": "both",
+    "expected_keywords": ["revenue", "termination", "60 days"],
+    "expected_intent": "hybrid_composite"
+  }
+]
